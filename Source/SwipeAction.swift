@@ -83,7 +83,12 @@ public class SwipeAction: NSObject {
     ///
     /// - note: When set to `true`, the actions menu is automatically hidden when the action is selected. The default value is `false`.
     public var hidesWhenSelected = false
-    
+
+    /// A transform for view
+    ///
+    /// - note: ie. chat app loads cells from bottom with -pi transform, transfrom pi will be applied so action button is not upsidedown
+    public var transform = CGAffineTransform.identity
+
     /**
      Constructs a new `SwipeAction` instance.
 
